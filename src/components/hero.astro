@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from "../assets/admin.png";
+import Link from "@components/ui/link.astro";
+const Demo = import.meta.env.DEMO;
+const Documentation = import.meta.env.DOCUMENTATION;
+---
+
+  <main class="flex-col gap-12 max-w-3xl md:block md:max-w-none md:mt-10 relative">
+    <div class="md:absolute md:flex md:h-full md:items-center md:w-full" >
+        <div class="px-4 md:mx-auto md:w-full md:max-w-7xl" >
+            <div class="md:w-3/5 md:pr-8 xl:w-1/2 xl:pr-12" >
+                <h1 class="text-5xl font-bold text-gray-800 md:text-6xl lg:text-7xl xl:text-[60px]">
+                    Echoboard feedback management software
+                </h1>
+                <p class="mt-8 text-lg font-medium text-slate-600">
+                    A sleek, efficient tool for enhancing customer interaction. It simplifies gathering and organizing user feedback, backed by a robust knowledge base
+                </p>
+                <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6" >
+                    
+                  <Link
+                  href={Demo}
+                  target="_blank"
+                  rel="noopener">Demo</Link
+                >
+                <Link
+                  size="lg"
+                  style="outline"
+                  rel="noopener"
+                  href={Documentation}
+                  target="_blank">Read the docs</Link
+                >
+                
+              
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex w-full justify-end my-20" >
+        <div class="md:pl-0 md:w-2/5 overflow-hidden pl-8 relative xl:pl-16 xl:w-1/2" x-data="{ modalIsOpen: false }" >
+            <div class="relative" >
+              <Image
+              class="hidden md:block max-w-7xl max-h-none h-auto leading-6 align-middle rounded-xl border-2 border-gray-200 border-solid text-slate-400 "
+              width={1008}
+              src={heroImage}
+              alt="EchoBoard Admin Preview"
+              loading="eager"
+              format="avif"
+            />
+            </div>
+
+        </div>
+    </div>
+</main>

@@ -1,0 +1,23 @@
+---
+import Container from "@components/container.astro";
+import Cta from "@components/cta.astro";
+import Features from "@components/features.astro";
+import Footer from "@components/footer.astro";
+import Hero from "@components/hero.astro";
+import Logos from "@components/logos.astro";
+import Layout from "@layouts/Layout.astro";
+import Pricing from "../pages/pricing.astro";
+
+---
+
+<Layout title="">
+  <div class="mx-auto px-5">
+    <Hero />
+  </div>
+  <Container class:list={['max-w-screen-xl ']} >
+    <Features />
+    <Logos />
+    <Pricing />
+    <Cta />
+  </Container>
+</Layout>

@@ -1,0 +1,59 @@
+---
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Price from "@components/pricing.astro";
+const Regular = import.meta.env.REGULAR;
+const Extended = import.meta.env.EXTENDED;
+
+const pricing = [
+  {
+    name: "Regular",
+    price: "99$",
+    popular: false,
+    features: [
+      "Lifetime Update",
+      "All Features",
+      "Single Domain",
+      "Budget Conscious",
+      "Easy Installer",
+      "12 Months Support",
+    ],
+    button: {
+      text: "Get Started",
+      link: Regular,
+    },
+  },
+  {
+    name: "Extended",
+    price: "350$",
+    popular: true,
+    features: [
+      "All Regular Features",
+        "Customization Assistance",
+      "Exclusive Add-Ons",
+        "Early Access to New Features",
+        "Performance Optimization Consultation",
+      "Lifetime Support",
+    ],
+    button: {
+      text: "Get Started",
+      link: Extended,
+    },
+  },
+];
+---
+
+<div id="pricing">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Pricing</Fragment>
+      <Fragment slot="desc"
+        >Simple & Predictable pricing. No Surprises.</Fragment
+      >
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <Price plan={item} />)}
+    </div>
+  </Container>
+</div>

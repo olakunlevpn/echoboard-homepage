@@ -1,0 +1,16 @@
+---
+import Link from "./ui/link.astro";
+const Demo = import.meta.env.DEMO;
+
+---
+
+<div
+  class="bg-black px-20 py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center">
+  <h2 class="text-white text-3xl md:text-6xl">Master your customers</h2>
+  <p class="text-slate-500 mt-4 text-lg md:text-xl">
+    Leverage user feedback to gain valuable insights and smoothly navigate your product discovery journey.
+  </p>
+  <div class="flex mt-5">
+    <Link href={Demo} style="inverted">Explore the demo</Link>
+  </div>
+</div>

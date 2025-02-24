@@ -1,0 +1,72 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "High-Speed Performance",
+    description:
+      "EchoBoard delivers rapid responses and seamless interaction, using the latest in modern technology for unmatched efficiency.",
+    icon: "octicon:rocket-24",
+  },
+  {
+    title: "Easy Customization",
+    description:
+      "Tailor EchoBoard to your needs with flexible design choices and clean, structured code that's a joy to work with.",
+    icon: "dashicons:admin-customizer",
+  },
+  {
+    title: "Admin Control",
+    description:
+      "Manage your platform effortlessly with EchoBoard's comprehensive admin panel, designed for intuitive navigation and full customization.",
+    icon: "mdi:gear-play-outline",
+  },
+  {
+    title: "Insightful Analytics",
+    description:
+      "Make informed decisions with EchoBoard's advanced reporting tools that turn user feedback into actionable insights.",
+    icon: "gg:insights",
+  },
+  {
+    title: "Vibrant Interface Options",
+    description:
+      "Choose from eight colorful palettes to personalize your EchoBoard experience, ensuring it aligns with your brand and style",
+    icon: "mdi:palette",
+  },
+  {
+    title: "Cutting-Edge Integration",
+    description:
+      "EchoBoard harnesses Laravel's robustness, AlpineJS's agility, and Livewire's interactivity, all within Bootstrap 5's sleek interface, for an outstanding user experience.",
+    icon: "mdi:puzzle",
+  },
+];
+---
+
+<div class="my-36">
+
+
+<div class="mt-36 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Everything you need to understand your customer needs
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Leave behind the clutter of spreadsheets, emails, and documents. Bring together feedback from all your sources in one place to effectively measure requests and delve into the reasons behind your users' needs.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
+</div>
